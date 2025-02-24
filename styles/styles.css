@@ -31,5 +31,20 @@ ul {
   justify-content: flex-end;
 }
 
-li {
+li:first-child {
+  margin-right: auto;
+}
+
+a.myLogo {
+  color: rgb(73, 58, 58);
+  font-size: 1.5em;
+  font-weight: bold;
+  font-family: jokerman;
+}
+
+a.myLogo:hover {
+  color: black;
+}
+a.myLogo:focus {
+  color: rgb(58, 3, 110);
 }
