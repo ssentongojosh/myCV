@@ -9,13 +9,54 @@
   <body>
     <nav>
       <div class="nav">
-        <ul>
-          <li><a href="" class="myLogo">Ssentongo</a></li>
-          <li><a href="">About Me</a></li>
-          <li><a href="">Hobbies and Interests</a></li>
-          <li><a href="">Contact Me</a></li>
+        <label for="logo" class="myLogo">Ssentongo</label>
+        <ul class="links">
+          <li><a href="#About">About</a></li>
+          <li><a href="">Skills</a></li>
+          <li><a href="">Projects</a></li>
+          <li><a href="">Contact</a></li>
         </ul>
       </div>
     </nav>
+
+    <section id="About">
+      <h2>About Me</h2>
+      <p>
+        I'am a passionate learner in Software Engineering. You can download my
+        CV <a href="">here</a>
+      </p>
+    </section>
+
+    <section id="skills">
+      <h2>Skills and Tools</h2>
+      <ul>
+        <li>Languages: Python, JavaScript,HTML,CSS</li>
+        <li>FrameWorks: Django</li>
+        <li>Tools:Git,Linux,VS Code</li>
+        <li>
+          Currently Learning: Binary Exploitation on <a href="">pwn.college</a>
+        </li>
+      </ul>
+    </section>
+
+    <section id="contact">
+      <h2>Get in Touch</h2>
+      <form action="">
+        <input type="text" placeholder="Your Name" required />
+        <input type="email" placeholder="you@example.com" required />
+        <textarea
+          name=""
+          id=""
+          rows="5"
+          placeholder="Your message..."
+          required
+        ></textarea>
+        <button type="submit">Send Message</button>
+      </form>
+      <div class="social-links">
+        <a href="">Github</a>
+        <a href="">LinkedIn</a>
+      </div>
+    </section>
   </body>
 </html>
