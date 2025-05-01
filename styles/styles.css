@@ -1,23 +1,39 @@
 * {
   margin: 0;
   padding: 0;
+  box-sizing: border-box;
+  font-family: "Space Grotesk", sans-serif;
+}
+
+:root {
+  --bg-color: #121212;
+  --text-color: #fff;
+  --accent-color: #ffdd00;
 }
 
 body {
   min-height: 100vh;
+  background-color: var(--bg-color);
+  color: var(--text-color);
+  line-height: 1.6;
+  padding-top: 60px;
 }
 
 .nav {
-  background-color: tomato;
+  position: fixed;
+  top: 0;
+  background-color: #1e1e1e;
   box-shadow: 3px 3px 3px rgba(12, 1, 19, 0.3);
   padding: 20px;
   display: flex;
   justify-content: flex-end;
+  z-index: 1000;
+  width: 100%;
 }
 
 div.nav a {
   text-decoration: none;
-  padding: 0 20px ;
+  padding: 0 20px;
   font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
   font-size: larger;
   color: white;
@@ -37,23 +53,23 @@ div.nav li {
   overflow-wrap: break-word;
 }
 
-
-div.nav a.myLogo {
-  color: rgb(73, 58, 58);
+div.nav .myLogo {
+  color: black;
+  background-color: var(--accent-color);
   font-size: 1.5em;
   font-weight: bold;
-  font-family: jokerman;
+  border-radius: 4px;
 }
 
-div.nav a.myLogo:hover {
-  color: black;
+div.nav .myLogo:hover {
+  color: #fff;
 }
-div.nav a.myLogo:focus {
+div.nav .myLogo:focus {
   color: rgb(58, 3, 110);
 }
 
 div.nav a:hover {
-  color: rgb(58, 3, 110);
+  color: var(--accent-color);
 }
 
 div.nav a::after {
@@ -73,20 +89,74 @@ div.nav a:hover::after {
   width: 90%;
 }
 
-label.myLogo{
+label.myLogo {
   font-size: larger;
-  font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+  font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
   font-weight: bold;
-  color:saddlebrown;
+  color: saddlebrown;
   margin-right: auto;
 }
 
-@media(max-width:550px){
-   .links{
-    display: none;
+section {
+  padding: 4rem 2rem;
+  max-width: 800px;
+  margin: 0 auto;
+}
 
-   }
-   .myLogo{
+h2 {
+  font-size: 2rem;
+  margin-bottom: 1.5rem;
+}
+
+form {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+input,
+textarea {
+  padding: 0.75rem;
+  border: none;
+  border-radius: 4px;
+  font-size: 1rem;
+  background-color: #1e1e1e;
+  color: var(--text-color);
+  border: 1px solid #333;
+}
+
+input:focus,
+textarea:focus {
+  border-color: var(--accent-color);
+  outline: none;
+}
+
+button {
+  background-color: var(--accent-color);
+  color: #000;
+  padding: 0.75rem;
+  border: none;
+  border-radius: 4px;
+  font-weight: bold;
+  cursor: pointer;
+  transition: transform 0.2s;
+}
+
+button:hover {
+  transform: scale(1.05);
+}
+
+.social-links a {
+  color: var(--accent-color);
+  margin-right: 1rem;
+  text-decoration: none;
+}
+
+@media (max-width: 550px) {
+  .links {
+    display: none;
+  }
+  .myLogo {
     margin: auto;
-   }
+  }
 }
