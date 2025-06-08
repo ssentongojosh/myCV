@@ -47,8 +47,6 @@
     </section>
 
     <section id="about">
-
-    <section id="about">
       <h2>About Me</h2>
       <p>
         I'm a passionate Software Engineering student with experience in
@@ -57,23 +55,65 @@
         cybersecurity and binary exploitation.
       </p>
       <p>
-        <a href="/path/to/your/cv.pdf" download class="cv-download"
-          >Download My CV</a
-        >
+        When I'm not coding, you can find me exploring new technologies, participating in hackathons, 
+        or diving deep into cybersecurity challenges on platforms like pwn.college.
+      </p>
+      <p>
+        <a href="/path/to/your/cv.pdf" download class="cv-download">Download My CV</a>
       </p>
     </section>
 
     <section id="skills">
       <h2>Skills and Tools</h2>
-      <ul>
-        <li><strong>Languages:</strong> Python, JavaScript, HTML, CSS</li>
-        <li><strong>Frameworks:</strong> Django</li>
-        <li><strong>Tools:</strong> Git, Linux, VS Code</li>
-        <li>
-          <strong>Currently Learning:</strong> Binary Exploitation on
-          <a href="https://pwn.college">pwn.college</a>
-        </li>
-      </ul>
+      <div class="skills-grid">
+        <div class="skill-item">
+          <div class="skill-header">
+            <span><strong>Python</strong></span>
+            <span>85%</span>
+          </div>
+          <div class="skill-bar">
+            <div class="skill-progress" style="width: 85%"></div>
+          </div>
+        </div>
+        <div class="skill-item">
+          <div class="skill-header">
+            <span><strong>JavaScript</strong></span>
+            <span>75%</span>
+          </div>
+          <div class="skill-bar">
+            <div class="skill-progress" style="width: 75%"></div>
+          </div>
+        </div>
+        <div class="skill-item">
+          <div class="skill-header">
+            <span><strong>HTML/CSS</strong></span>
+            <span>90%</span>
+          </div>
+          <div class="skill-bar">
+            <div class="skill-progress" style="width: 90%"></div>
+          </div>
+        </div>
+        <div class="skill-item">
+          <div class="skill-header">
+            <span><strong>Django</strong></span>
+            <span>70%</span>
+          </div>
+          <div class="skill-bar">
+            <div class="skill-progress" style="width: 70%"></div>
+          </div>
+        </div>
+      </div>
+      
+      <div class="tools-section">
+        <h3>Tools & Technologies</h3>
+        <div class="tools-list">
+          <span class="tool-tag">Git</span>
+          <span class="tool-tag">Linux</span>
+          <span class="tool-tag">VS Code</span>
+          <span class="tool-tag">Docker</span>
+          <span class="tool-tag">PostgreSQL</span>
+        </div>
+      </div>
     </section>
 
     <section id="projects">
@@ -116,24 +156,42 @@
 
     <section id="contact">
       <h2>Get in Touch</h2>
-      <form action="">
-        <input type="text" placeholder="Your Name" required />
-        <input type="email" placeholder="you@example.com" required />
-        <textarea
-          name=""
-          id=""
-          rows="5"
-          placeholder="Your message..."
-          required
-        ></textarea>
-        <button type="submit">Send Message</button>
+      <p>Let's connect! I'm always open to discussing new opportunities, projects, or just having a chat about technology.</p>
+      <form action="#" method="POST" class="contact-form">
+        <div class="form-group">
+          <input type="text" name="name" placeholder="Your Name" required />
+        </div>
+        <div class="form-group">
+          <input type="email" name="email" placeholder="your@email.com" required />
+        </div>
+        <div class="form-group">
+          <input type="text" name="subject" placeholder="Subject" required />
+        </div>
+        <div class="form-group">
+          <textarea name="message" rows="5" placeholder="Your message..." required></textarea>
+        </div>
+        <button type="submit" class="submit-btn">Send Message</button>
       </form>
       <div class="social-links">
-        <a href="">Github</a>
-        <a href="">LinkedIn</a>
+        <a href="https://github.com/yourusername" target="_blank" rel="noopener">
+          <span>📱</span> GitHub
+        </a>
+        <a href="https://linkedin.com/in/yourusername" target="_blank" rel="noopener">
+          <span>💼</span> LinkedIn
+        </a>
+        <a href="mailto:your.email@example.com">
+          <span>📧</span> Email
+        </a>
       </div>
     </section>
-  </body>
+  
+  <footer class="footer">
+    <div class="footer-content">
+      <p>&copy; 2025 Ssentongo. Built with passion and lots of coffee ☕</p>
+      <p>Made with HTML, CSS & JavaScript</p>
+    </div>
+  </footer>
+</body>
   <script>
     // Theme toggle functionality
     const themeToggle = document.getElementById("theme-toggle");
