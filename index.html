@@ -21,18 +21,45 @@
           <li><a href="#blog">Blog</a></li>
           <li><a href="#contact">Contact</a></li>
         </ul>
+        <button
+          id="theme-toggle"
+          class="theme-toggle"
+          aria-label="Toggle theme"
+        >
+          <span class="theme-icon">🌙</span>
+        </button>
       </div>
     </nav>
+
+    <section id="profile-card" class="profile-section">
+      <div class="profile-card">
+        <div class="profile-image-wrapper">
+          <img src="images/profile.jpg" alt="Your Profile Picture" class="profile-pic">
+        </div>
+        <div class="profile-info">
+          <h1 class="profile-name">Ssentongo</h1>
+          <p class="profile-title">Software Engineering Student</p>
+          <p class="profile-description">
+            Passionate developer exploring cybersecurity and full-stack development
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <section id="about">
 
     <section id="about">
       <h2>About Me</h2>
       <p>
-        I'm a passionate Software Engineering student with experience in full-stack development.
-        I enjoy solving complex problems and building user-friendly applications. Currently expanding
-        my expertise in cybersecurity and binary exploitation.
+        I'm a passionate Software Engineering student with experience in
+        full-stack development. I enjoy solving complex problems and building
+        user-friendly applications. Currently expanding my expertise in
+        cybersecurity and binary exploitation.
       </p>
       <p>
-        <a href="/path/to/your/cv.pdf" download class="cv-download">Download My CV</a>
+        <a href="/path/to/your/cv.pdf" download class="cv-download"
+          >Download My CV</a
+        >
       </p>
     </section>
 
@@ -42,7 +69,10 @@
         <li><strong>Languages:</strong> Python, JavaScript, HTML, CSS</li>
         <li><strong>Frameworks:</strong> Django</li>
         <li><strong>Tools:</strong> Git, Linux, VS Code</li>
-        <li><strong>Currently Learning:</strong> Binary Exploitation on <a href="https://pwn.college">pwn.college</a></li>
+        <li>
+          <strong>Currently Learning:</strong> Binary Exploitation on
+          <a href="https://pwn.college">pwn.college</a>
+        </li>
       </ul>
     </section>
 
@@ -50,7 +80,11 @@
       <h2>Projects</h2>
       <div class="project">
         <h3>Personal CV Website</h3>
-        <p>A responsive personal portfolio website built with HTML, CSS, and modern web design principles. Features dark theme, smooth navigation, and mobile-first design.</p>
+        <p>
+          A responsive personal portfolio website built with HTML, CSS, and
+          modern web design principles. Features dark theme, smooth navigation,
+          and mobile-first design.
+        </p>
         <div class="project-links">
           <a href="https://github.com/yourusername/MY_CV">Repository</a>
           <a href="#">Live Demo</a>
@@ -63,12 +97,18 @@
       <h2>Blog</h2>
       <div class="blog-post">
         <h3>Blog Post Title 1</h3>
-        <p>A short excerpt from your first blog post. This should give readers a brief idea of the content.</p>
+        <p>
+          A short excerpt from your first blog post. This should give readers a
+          brief idea of the content.
+        </p>
         <a href="#">Read More</a>
       </div>
       <div class="blog-post">
         <h3>Blog Post Title 2</h3>
-        <p>A short excerpt from your second blog post. Encourage readers to click and learn more.</p>
+        <p>
+          A short excerpt from your second blog post. Encourage readers to click
+          and learn more.
+        </p>
         <a href="#">Read More</a>
       </div>
       <!-- Add more blog posts as needed -->
@@ -94,4 +134,30 @@
       </div>
     </section>
   </body>
+  <script>
+    // Theme toggle functionality
+    const themeToggle = document.getElementById("theme-toggle");
+    const themeIcon = document.querySelector(".theme-icon");
+    const body = document.body;
+
+    // Check for saved theme preference or default to 'dark'
+    const currentTheme = localStorage.getItem("theme") || "dark";
+    body.setAttribute("data-theme", currentTheme);
+
+    // Update icon based on current theme
+    updateThemeIcon(currentTheme);
+
+    themeToggle.addEventListener("click", () => {
+      const currentTheme = body.getAttribute("data-theme");
+      const newTheme = currentTheme === "dark" ? "light" : "dark";
+
+      body.setAttribute("data-theme", newTheme);
+      localStorage.setItem("theme", newTheme);
+      updateThemeIcon(newTheme);
+    });
+
+    function updateThemeIcon(theme) {
+      themeIcon.textContent = theme === "dark" ? "🌙" : "☀️";
+    }
+  </script>
 </html>
