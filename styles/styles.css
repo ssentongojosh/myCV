@@ -225,3 +225,24 @@ button:hover {
     margin: auto;
   }
 }
+
+@media (max-width: 768px) {
+  section {
+    padding: 2rem 1rem;
+  }
+  
+  .nav {
+    flex-direction: column;
+    text-align: center;
+  }
+  
+  .nav ul {
+    justify-content: center;
+    margin-top: 1rem;
+  }
+  
+  .nav a {
+    padding: 0 10px;
+    font-size: 1rem;
+  }
+}
