@@ -34,13 +34,18 @@
     <section id="profile-card" class="profile-section">
       <div class="profile-card">
         <div class="profile-image-wrapper">
-          <img src="images/profile.jpg" alt="Your Profile Picture" class="profile-pic">
+          <img
+            src="images/profile.jpg"
+            alt="Your Profile Picture"
+            class="profile-pic"
+          />
         </div>
         <div class="profile-info">
           <h1 class="profile-name">Ssentongo</h1>
           <p class="profile-title">Software Engineering Student</p>
           <p class="profile-description">
-            Passionate developer exploring cybersecurity and full-stack development
+            Passionate developer exploring cybersecurity and full-stack
+            development
           </p>
         </div>
       </div>
@@ -55,11 +60,12 @@
         cybersecurity and binary exploitation.
       </p>
       <p>
-        When I'm not coding, you can find me exploring new technologies, participating in hackathons, 
-        or diving deep into cybersecurity challenges on platforms like pwn.college.
+        When I'm not coding, you can find me exploring new technologies,
+        participating in hackathons, or diving deep into cybersecurity
+        challenges on platforms like pwn.college.
       </p>
       <p>
-        <a href="/path/to/your/cv.pdf" download class="cv-download">Download My CV</a>
+        <button id="download-cv" class="cv-download">📄 Download CV</button>
       </p>
     </section>
 
@@ -103,7 +109,7 @@
           </div>
         </div>
       </div>
-      
+
       <div class="tools-section">
         <h3>Tools & Technologies</h3>
         <div class="tools-list">
@@ -126,7 +132,7 @@
           and mobile-first design.
         </p>
         <div class="project-links">
-          <a href="https://github.com/yourusername/MY_CV">Repository</a>
+          <a href="https://github.com/ssentongojosh/myCV">Repository</a>
           <a href="#">Live Demo</a>
         </div>
       </div>
@@ -156,42 +162,61 @@
 
     <section id="contact">
       <h2>Get in Touch</h2>
-      <p>Let's connect! I'm always open to discussing new opportunities, projects, or just having a chat about technology.</p>
+      <p>
+        Let's connect! I'm always open to discussing new opportunities,
+        projects, or just having a chat about technology.
+      </p>
       <form action="#" method="POST" class="contact-form">
         <div class="form-group">
           <input type="text" name="name" placeholder="Your Name" required />
         </div>
         <div class="form-group">
-          <input type="email" name="email" placeholder="your@email.com" required />
+          <input
+            type="email"
+            name="email"
+            placeholder="your@email.com"
+            required
+          />
         </div>
         <div class="form-group">
           <input type="text" name="subject" placeholder="Subject" required />
         </div>
         <div class="form-group">
-          <textarea name="message" rows="5" placeholder="Your message..." required></textarea>
+          <textarea
+            name="message"
+            rows="5"
+            placeholder="Your message..."
+            required
+          ></textarea>
         </div>
         <button type="submit" class="submit-btn">Send Message</button>
       </form>
       <div class="social-links">
-        <a href="https://github.com/yourusername" target="_blank" rel="noopener">
+        <a
+          href="https://github.com/ssentongojosh"
+          target="_blank"
+          rel="noopener"
+        >
           <span>📱</span> GitHub
         </a>
-        <a href="https://linkedin.com/in/yourusername" target="_blank" rel="noopener">
+        <a
+          href="https://linkedin.com/in/joshua-ssentongo-8b6755352"
+          target="_blank"
+          rel="noopener"
+        >
           <span>💼</span> LinkedIn
         </a>
-        <a href="mailto:your.email@example.com">
-          <span>📧</span> Email
-        </a>
+        <a href="mailto:your.email@example.com"> <span>📧</span> Email </a>
       </div>
     </section>
-  
-  <footer class="footer">
-    <div class="footer-content">
-      <p>&copy; 2025 Ssentongo. Built with passion and lots of coffee ☕</p>
-      <p>Made with HTML, CSS & JavaScript</p>
-    </div>
-  </footer>
-</body>
+
+    <footer class="footer">
+      <div class="footer-content">
+        <p>&copy; 2025 Ssentongo. Built with passion and lots of coffee ☕</p>
+        <p>Made with HTML, CSS & JavaScript</p>
+      </div>
+    </footer>
+  </body>
   <script>
     // Theme toggle functionality
     const themeToggle = document.getElementById("theme-toggle");
@@ -218,4 +243,6 @@
       themeIcon.textContent = theme === "dark" ? "🌙" : "☀️";
     }
   </script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.1/jspdf.umd.min.js"></script>
+  <script src="script.js"></script>
 </html>
